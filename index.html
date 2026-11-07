@@ -1,0 +1,341 @@
+<!DOCTYPE html><html lang="en" data-theme="pink"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NeuralArt — AI & machine-learning consultancy, Vancouver</title>
+<meta name="description" content="NeuralArt is a Vancouver AI and machine-learning consultancy. We build AI products that actually ship — product development, AI consulting and big data — and stay on as your partner.">
+<meta name="theme-color" content="#F5F5F3">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NeuralArt — AI that actually ships">
+<meta property="og:description" content="AI product development, AI consulting and big data consulting from Vancouver, BC.">
+<meta property="og:image" content="https://neuralart-consulting.netlify.app/og.png">
+<meta property="og:url" content="https://neuralart-consulting.netlify.app/">
+<link rel="canonical" href="https://neuralart-consulting.netlify.app/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+/* ===== THEMES ===== */
+[data-theme=pink]{--ink:#0D0D0D;--paper:#F5F5F3;--accent:#FF4FA3;--on-accent:#0D0D0D;--art:#0D0D0D;--art-bg:#F5F5F3}
+[data-theme=volt]{--ink:#0D0D0D;--paper:#F5F5F3;--accent:#F2E600;--on-accent:#0D0D0D;--art:#0D0D0D;--art-bg:#F5F5F3}
+[data-theme=cyan]{--ink:#F2F2F0;--paper:#0D0D0D;--accent:#38E1FF;--on-accent:#0D0D0D;--art:#F2F2F0;--art-bg:#0D0D0D}
+[data-theme=tomato]{--ink:#1A0F0A;--paper:#FF5B36;--accent:#1A0F0A;--on-accent:#FF5B36;--art:#1A0F0A;--art-bg:#FF5B36}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip}
+body{background:var(--paper);color:var(--ink);font:400 16px/1.45 Archivo,system-ui,sans-serif;transition:background .5s,color .5s;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+.m{font:400 11px/1.4 'JetBrains Mono',ui-monospace,monospace;text-transform:uppercase;letter-spacing:.04em}
+.px{padding-left:clamp(16px,2.2vw,32px);padding-right:clamp(16px,2.2vw,32px)}
+@media (hover:hover){body,a{cursor:none}}
+.cur{position:fixed;left:0;top:0;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--accent);pointer-events:none;z-index:100;transition:width .3s,height .3s,margin .3s;mix-blend-mode:multiply}
+[data-theme=cyan] .cur{mix-blend-mode:screen}
+.talk,.talk *{cursor:auto}.talk button,.talk a,.talk .x{cursor:pointer}
+.cur.big{width:70px;height:70px;margin:-35px 0 0 -35px}
+
+
+header{display:flex;justify-content:space-between;align-items:center;padding-top:20px;padding-bottom:20px;position:relative;z-index:5}
+.logo{font-weight:900;font-stretch:62%;font-size:22px;text-transform:uppercase;letter-spacing:.01em}
+header nav{display:flex;gap:28px}
+.pill{background:var(--ink);color:var(--paper);padding:11px 18px;border-radius:999px;font-weight:600;font-size:14px;transition:background .3s,color .3s}
+.pill:hover{background:var(--accent);color:var(--on-accent)}
+
+/* kinetic hero */
+.kin{padding-top:clamp(10px,2vw,30px);user-select:none}
+.line{display:flex;align-items:flex-end;line-height:.78;text-transform:uppercase;white-space:nowrap}
+.word{display:inline-flex}.word span{display:inline-block;font-variation-settings:"wdth" 100,"wght" 900;will-change:font-variation-settings}
+.l2 .word{color:var(--accent)}.side{margin-left:auto;display:flex;align-items:center;gap:28px;padding-bottom:.02em}.side .m{text-align:right;opacity:.6;line-height:1.5}
+.hsub{display:grid;grid-template-columns:2fr 1fr;gap:24px;align-items:end;padding-top:clamp(24px,3vw,40px);padding-bottom:clamp(30px,4vw,60px);border-bottom:1px solid var(--ink)}
+.hsub p{font-size:clamp(20px,1.9vw,28px);line-height:1.15;font-weight:500;letter-spacing:-.02em;max-width:460px}
+.hsub .m{opacity:.6}
+.hsub .c{justify-self:end}
+.round{display:grid;place-items:center;width:clamp(110px,13vw,190px);aspect-ratio:1;border-radius:50%;background:var(--accent);color:var(--on-accent);font-weight:800;font-stretch:80%;text-transform:uppercase;font-size:17px;text-align:center;line-height:1;will-change:transform;transition:background .5s}
+.round b{display:block;font-size:26px;margin-top:4px}
+
+/* sticky services */
+.svc{display:grid;grid-template-columns:5fr 7fr;gap:clamp(20px,3vw,48px);border-bottom:1px solid var(--ink)}
+.stick{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(24px,3vw,40px) 0}
+.num{font-weight:900;font-stretch:62%;font-size:clamp(180px,24vw,380px);line-height:.75;letter-spacing:-.04em;color:var(--accent);position:relative;height:.75em;overflow:hidden}
+.num div{position:absolute;inset:0;transition:transform .7s cubic-bezier(.7,0,.2,1)}
+.stitle{font-weight:800;font-stretch:90%;font-size:clamp(28px,2.6vw,40px);letter-spacing:-.03em;line-height:1}
+.prog{height:3px;background:color-mix(in srgb,var(--ink) 15%,transparent);margin-top:18px}.prog b{display:block;height:100%;width:100%;background:var(--ink);transform:scaleX(0);transform-origin:left}
+.panels{padding-top:clamp(24px,3vw,40px)}
+.stitle{display:none}
+.snav{display:flex;flex-direction:column;border-top:1px solid var(--ink)}
+.snav button{all:unset;cursor:pointer;display:flex;gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px solid color-mix(in srgb,var(--ink) 18%,transparent);font-weight:700;font-size:clamp(17px,1.5vw,22px);letter-spacing:-.02em;opacity:.38;transition:opacity .3s,padding .4s cubic-bezier(.2,.8,.1,1)}
+.snav button:hover{opacity:.8}
+.snav button.on{opacity:1;padding-left:14px;box-shadow:inset 4px 0 0 var(--accent)}
+.snav button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.panel{min-height:92vh;display:flex;flex-direction:column;justify-content:center;gap:24px;padding:40px 0}
+.panel canvas{width:100%;aspect-ratio:16/10;display:block;border-radius:6px;background:color-mix(in srgb,var(--ink) 5%,var(--paper))}
+.panel h3{font-weight:900;font-stretch:70%;text-transform:uppercase;font-size:clamp(46px,5.4vw,84px);line-height:.85;letter-spacing:-.02em}
+.panel p{font-size:clamp(17px,1.4vw,20px);max-width:520px}
+.tags{display:flex;gap:8px;flex-wrap:wrap}.tags span{border:1px solid var(--ink);border-radius:99px;padding:5px 11px}
+
+/* velocity marquee */
+.mar{background:var(--accent);color:var(--on-accent);overflow:hidden;white-space:nowrap;padding:14px 0;transition:background .5s}
+.mar>div{display:inline-flex;will-change:transform;backface-visibility:hidden}
+.mar span{font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(56px,8vw,120px);line-height:.9;padding-right:.35em}
+.mar i{font-style:normal;font-size:clamp(56px,8vw,120px);padding-right:.35em;line-height:.9}
+
+/* accordion */
+.why{padding-top:clamp(60px,8vw,120px);padding-bottom:clamp(60px,8vw,120px)}
+.whyh{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px;gap:20px}
+.whyh h2{font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(64px,9vw,140px);line-height:.8}
+.acc{border-top:1px solid var(--ink)}
+.it{border-bottom:1px solid var(--ink);padding:20px 0;display:grid;grid-template-columns:60px 1fr auto;gap:20px;align-items:start}
+.it h4{font-weight:800;font-size:clamp(30px,3.6vw,56px);line-height:1;letter-spacing:-.035em;transition:font-stretch .5s,font-weight .5s;font-stretch:100%}
+.it .ar{font-size:30px;line-height:1;transition:transform .4s;padding-top:6px}
+.it .body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s cubic-bezier(.2,.8,.1,1)}
+.it .body>div{overflow:hidden}.it .body p{padding-top:14px;font-size:18px;max-width:560px;opacity:.75}
+.it:hover h4,.it.open h4{font-stretch:125%;font-weight:900}
+.it:hover .body,.it.open .body{grid-template-rows:1fr}
+.it:hover .ar,.it.open .ar{transform:rotate(45deg);color:var(--accent)}
+[data-theme=tomato] .it:hover .ar{color:var(--paper)}
+
+/* stretch offer */
+.offer{border-top:1px solid var(--ink);padding-top:30px;padding-bottom:60px;overflow:hidden}
+.offer .top{display:flex;justify-content:space-between}
+.stretch{font-weight:900;font-size:clamp(52px,19.5vw,340px);line-height:.8;letter-spacing:-.05em;white-space:nowrap;margin:24px 0 20px}
+.stretch em{font-style:normal;color:var(--accent)}
+.ofrow{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end}
+.ofrow h3{font-weight:800;font-size:clamp(28px,3vw,46px);line-height:1;letter-spacing:-.03em}
+.ofrow p{font-size:18px;max-width:460px}
+
+/* contact */
+.cta{background:var(--ink);color:var(--paper);padding-top:clamp(60px,8vw,110px);padding-bottom:30px;transition:background .5s,color .5s}
+.cta h2{font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(90px,15vw,240px);line-height:.8;letter-spacing:-.02em}
+.cta h2 em{font-style:italic;font-weight:300;font-stretch:125%;text-transform:none;color:var(--accent);letter-spacing:-.05em}
+.cgrid{display:grid;grid-template-columns:1fr 1fr auto;gap:24px;align-items:end;margin-top:clamp(40px,5vw,70px);padding-bottom:clamp(40px,5vw,70px);border-bottom:1px solid color-mix(in srgb,var(--paper) 25%,transparent)}
+.cgrid a.v{display:block;font-size:clamp(20px,2vw,30px);font-weight:600;letter-spacing:-.02em;margin-top:8px;background:linear-gradient(var(--accent),var(--accent)) 0 100%/0 2px no-repeat;transition:background-size .4s}
+.cgrid a.v:hover{background-size:100% 2px}
+.cgrid .m{opacity:.55}
+.foot{display:flex;justify-content:space-between;padding-top:20px;padding-bottom:70px;gap:16px}
+
+/* ===== physics stage ===== */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.stage{position:relative;user-select:none;-webkit-user-select:none}
+.stretch{contain:layout paint}.mar{contain:layout paint}
+.word span{transform-origin:50% 55%;cursor:grab;touch-action:pan-y;position:relative;transition:color .25s}
+.stage[data-mode=free] .word span{will-change:transform}
+.word span.held{color:var(--accent);cursor:grabbing;z-index:3}
+.l2 .word span.held{color:var(--ink)}
+.word span.hit{animation:hit .38s}
+@keyframes hit{30%{color:var(--accent)}}
+.hint .tc{display:none}@media (hover:none){.hint .hv{display:none}.hint .tc{display:inline}}
+.hint{line-height:1.6}
+.rebuild{position:absolute;right:clamp(16px,2.2vw,32px);bottom:20px;z-index:6;display:flex;gap:10px;align-items:center;background:var(--ink);color:var(--paper);border:0;border-radius:999px;padding:12px 18px;font:600 14px Archivo,sans-serif;cursor:pointer;animation:pop .5s cubic-bezier(.2,1.6,.4,1)}
+.rebuild .m{opacity:.5;border:1px solid currentColor;border-radius:4px;padding:1px 5px;font-size:10px}
+.rebuild[hidden]{display:none}
+@keyframes pop{from{transform:scale(.3);opacity:0}}
+/* cursor with contextual label */
+.cur{display:grid;place-items:center}
+.cur span{font:500 10px/1 'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--on-accent);opacity:0;transition:opacity .2s}
+.cur.lab{width:76px;height:76px;margin:-38px 0 0 -38px;mix-blend-mode:normal}
+.cur.lab span{opacity:1}
+.cur.down{transform-origin:center}
+/* velocity marquee */
+
+/* pit */
+.pit{position:relative;height:clamp(300px,34vw,440px);margin-top:10px;overflow:hidden;border-bottom:1px solid color-mix(in srgb,var(--paper) 25%,transparent);touch-action:pan-y}
+.pith{position:absolute;left:0;top:14px;opacity:.5}
+.chip{position:absolute;left:0;top:0;padding:.42em .9em .5em;border-radius:999px;font-weight:800;font-stretch:80%;text-transform:uppercase;font-size:clamp(22px,2.6vw,40px);line-height:1;white-space:nowrap;cursor:grab;user-select:none;touch-action:none;background:var(--paper);color:var(--ink);will-change:transform;transform:translate(-999px,-999px)}
+.chip.a{background:var(--accent);color:var(--on-accent)}
+.chip.o{background:transparent;color:var(--paper);border:2px solid var(--paper)}
+.chip.held{cursor:grabbing;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.chip.go{background:var(--accent);color:var(--on-accent);font-stretch:62%}
+@media (hover:none){.cur{display:none!important}.rebuild .m{display:none}}
+
+/* ===== contact dialog ===== */
+.talk{border:0;padding:clamp(24px,4vw,56px);width:min(1080px,94vw);max-height:92vh;background:var(--ink);color:var(--paper);border-radius:18px;margin:auto}
+.talk::backdrop{background:color-mix(in srgb,var(--ink) 55%,transparent);backdrop-filter:blur(6px)}
+.talk[open]{animation:dlg .5s cubic-bezier(.2,.9,.2,1)}@keyframes dlg{from{opacity:0;transform:translateY(30px) scale(.97)}}
+.talk h2{font-weight:900;font-stretch:62%;text-transform:uppercase;font-size:clamp(64px,9vw,128px);line-height:.8;margin-bottom:clamp(24px,3vw,40px)}
+.talk h2 em{font-style:italic;font-weight:300;font-stretch:125%;text-transform:none;color:var(--accent)}
+.talk .x{all:unset;cursor:pointer;position:absolute;right:20px;top:14px;font-size:38px;line-height:1;opacity:.6}.talk .x:hover{opacity:1;color:var(--accent)}
+.tg{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px)}
+.talk .row{border-top:1px solid color-mix(in srgb,var(--paper) 22%,transparent);padding:16px 0}
+.talk .row .m{opacity:.55;display:block;margin-bottom:6px}.talk .row b{display:block;font-size:clamp(20px,2vw,28px);font-weight:600;letter-spacing:-.02em;word-break:break-all}
+.acts{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.acts button,.acts a{all:unset;cursor:pointer;border:1px solid color-mix(in srgb,var(--paper) 40%,transparent);border-radius:99px;padding:7px 14px;font-size:13px;font-weight:600;transition:background .2s,color .2s}
+.acts button:hover,.acts a:hover{background:var(--paper);color:var(--ink)}
+.acts button.ok{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.note{opacity:.5;margin-top:10px}
+.tf{display:flex;flex-direction:column;gap:14px}
+.tf label{display:flex;flex-direction:column;gap:6px}.tf .m{opacity:.55}
+.tf input,.tf textarea{font:inherit;font-size:17px;color:var(--paper);background:transparent;border:0;border-bottom:1px solid color-mix(in srgb,var(--paper) 35%,transparent);padding:8px 0;resize:vertical;border-radius:0}
+.tf input:focus,.tf textarea:focus{outline:0;border-bottom-color:var(--accent)}
+.send{all:unset;cursor:pointer;align-self:flex-start;background:var(--accent);color:var(--on-accent);padding:14px 22px;border-radius:99px;font-weight:700;margin-top:6px;transition:transform .2s}.send:hover{transform:translateY(-2px)}.send[disabled]{opacity:.5;pointer-events:none}
+.status{font-size:15px;min-height:1.4em}
+.talk :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media (max-width:760px){.tg{grid-template-columns:1fr}}
+[data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.1,1)}[data-reveal].in{opacity:1;transform:none}
+
+@media (max-width:900px){
+ header nav{display:none}
+ .hsub{grid-template-columns:1fr}.side .m{display:none}
+ .svc{grid-template-columns:1fr;gap:0}
+ .stick{position:sticky;top:0;z-index:4;height:auto;flex-direction:row;align-items:center;gap:14px;padding:10px 0;background:var(--paper);border-bottom:1px solid var(--ink);transition:background .5s}
+ .sl{display:none}.num{font-size:58px;flex:none;width:1.05em}.sbot{flex:1;min-width:0}
+ .stitle{display:block;font-size:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:6px}
+ .snav{flex-direction:row;border:0;gap:6px}.snav .t{display:none}
+ .snav button{padding:4px 10px;border:1px solid var(--ink);border-radius:99px;font-size:11px;opacity:.45}.snav button.on{padding-left:10px;box-shadow:none;background:var(--ink);color:var(--paper);opacity:1}
+ .prog{margin-top:8px}
+ .panel{min-height:auto;padding:36px 0;border-top:1px solid var(--ink)}.panel:first-child{border-top:0}.panels{padding-top:0}
+ .round{width:104px;font-size:12px;line-height:1.1}.round b{font-size:17px}.side{gap:0}
+ .ofrow,.cgrid{grid-template-columns:1fr}
+ .it{grid-template-columns:36px 1fr auto}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}[data-reveal]{opacity:1;transform:none}}
+</style></head><body>
+<div class="cur" id="cur" aria-hidden="true"><span id="curl"></span></div>
+<header class="px"><a class="logo" href="#">NeuralArt®</a><nav class="m"><a href="#services">Services</a><a href="#why">Why us</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></nav><a class="pill" href="#contact" data-talk>Let's talk</a></header>
+
+<section class="stage" id="stage"><h1 class="sr">NeuralArt — AI that actually ships</h1><div class="kin px" id="kin" aria-hidden="true"><div class="line l1"><span class="word" data-word="Neural"></span></div><div class="line l2"><span class="word" data-word="Art"></span><span class="side"><span class="m">AI &amp; ML consultancy<br>Vancouver, BC</span><a class="round" id="mag" href="#contact" data-talk><span>Start a<b>project →</b></span></a></span></div></div>
+<div class="hsub px"><p data-reveal>AI that actually ships. We turn complex problems into intelligent products — and stay on as your partner.</p>
+<div class="m hint">Local time — <span id="clk"></span><br>Taking on new projects</div>
+<button class="rebuild" id="rebuild" hidden>↺ Rebuild <span class="m">R</span></button></div></section>
+
+<section class="svc px" id="services">
+ <div class="stick"><span class="m sl">What we do</span><div class="num" id="num"><div>01</div><div style="transform:translateY(100%)">02</div><div style="transform:translateY(100%)">03</div></div>
+ <div class="sbot"><div class="stitle" id="stitle">AI Product Development</div>
+  <nav class="snav" id="snav" aria-label="Services"><button data-i="0" class="on"><span class="m">01</span><span class="t">AI Product Development</span></button><button data-i="1"><span class="m">02</span><span class="t">AI Consulting</span></button><button data-i="2"><span class="m">03</span><span class="t">Big Data Consulting</span></button></nav>
+  <div class="prog"><b id="prog"></b></div></div></div>
+ <div class="panels">
+  <div class="panel" data-i="0" data-t="AI Product Development"><canvas aria-hidden="true" data-plate="threads"></canvas><h3>AI Product<br>Development</h3><p>Transforming ideas into intelligent solutions — prototypes to production, with the product around the model.</p><div class="tags m"><span>Models</span><span>Pipelines</span><span>Interfaces</span></div></div>
+  <div class="panel" data-i="1" data-t="AI Consulting"><canvas aria-hidden="true" data-plate="dots"></canvas><h3>AI<br>Consulting</h3><p>Expert guidance to harness AI where it genuinely moves the needle for your business — and honest advice where it won't.</p><div class="tags m"><span>Strategy</span><span>Costing</span><span>Risk</span></div></div>
+  <div class="panel" data-i="2" data-t="Big Data Consulting"><canvas aria-hidden="true" data-plate="bars"></canvas><h3>Big Data<br>Consulting</h3><p>Make your product ready for large datasets without compromising speed — architecture, integration and pipelines.</p><div class="tags m"><span>Architecture</span><span>Integration</span><span>Scale</span></div></div>
+ </div>
+</section>
+
+<div class="mar" id="mar"><div><span>Connect your AIs</span><i>●</i><span>Expert annotators</span><i>●</i><span>Beginner‑friendly</span><i>●</i><span>Up to 50% off</span><i>●</i></div></div>
+
+<section class="why px" id="why"><div class="whyh"><h2>Why us</h2></div>
+<div class="acc">
+ <div class="it open"><span class="m">01</span><div><h4>Your AIs, connected</h4><div class="body"><div><p>We connect the models you already run so they work together as one system — no more siloed tools.</p></div></div></div><span class="ar">+</span></div>
+ <div class="it"><span class="m">02</span><div><h4>Ready annotators</h4><div class="body"><div><p>Experts on hand to label your data, serving the best interest of your product from week one.</p></div></div></div><span class="ar">+</span></div>
+ <div class="it"><span class="m">03</span><div><h4>Unmatched quality</h4><div class="body"><div><p>Senior engineers, rigorous evaluation, and products you can be proud to put in front of customers.</p></div></div></div><span class="ar">+</span></div>
+ <div class="it"><span class="m">04</span><div><h4>Beginner‑friendly</h4><div class="body"><div><p>We make sure everything we ship is usable by anyone in its intended audience.</p></div></div></div><span class="ar">+</span></div>
+</div></section>
+
+<section class="offer px" id="pricing"><div class="top m"><span>Pricing</span></div>
+<div class="stretch" id="stretch">50<em>%</em> off</div>
+<div class="ofrow"><h3>Discount on IP sharing.</h3><p>If you let us reuse core modules from the product we build for you, we'll take up to 50% off the price. Your data and differentiators stay yours.</p></div></section>
+
+<section class="cta px" id="contact"><h2>Let's <em>talk.</em></h2>
+<div class="cgrid"><div><span class="m">Email</span><a class="v" href="mailto:neuralartinc@gmail.com">neuralartinc@gmail.com</a></div><div><span class="m">Phone</span><a class="v" href="tel:+16044186801">+1 604 418 6801</a></div><button class="pill" data-talk style="background:var(--accent);color:var(--on-accent);border:0;font:inherit;font-weight:600;font-size:14px;cursor:pointer">Book a call ↗</button></div>
+<div class="pit" id="pit" aria-label="Topics we work on"></div>
+<div class="foot m"><span>© 2026 NeuralArt Consulting</span><span>Privacy Policy / Terms &amp; Support</span></div></section>
+
+<dialog class="talk" id="talk" aria-labelledby="talkh">
+ <button class="x" data-close aria-label="Close">×</button>
+ <h2 id="talkh">Let's <em>talk.</em></h2>
+ <div class="tg">
+  <div class="tl">
+   <div class="row"><span class="m">Email</span><b id="em">neuralartinc@gmail.com</b><div class="acts"><button data-copy="neuralartinc@gmail.com">Copy</button><a href="mailto:neuralartinc@gmail.com">Open mail ↗</a></div></div>
+   <div class="row"><span class="m">Phone</span><b>+1 604 418 6801</b><div class="acts"><button data-copy="+16044186801">Copy</button><a href="tel:+16044186801">Call ↗</a></div></div>
+  </div>
+  <form class="tf" id="tf" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+   <input type="hidden" name="form-name" value="contact"><p hidden><label>Leave empty <input name="bot-field"></label></p>
+   <label><span class="m">Name</span><input name="name" required autocomplete="name"></label>
+   <label><span class="m">Email</span><input name="email" type="email" required autocomplete="email"></label>
+   <label><span class="m">What are you building?</span><textarea name="message" rows="4" required></textarea></label>
+   <button class="send" type="submit">Send message →</button>
+   <p class="status" id="tfs" role="status"></p>
+  </form>
+ </div>
+</dialog>
+<script src="na.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+<script>window.Matter||document.write('<script src="matter.min.js"><\/script>')</script>
+<script src="physics.js"></script>
+<script>
+/* Theme: change data-theme on <html> to pink | volt | cyan | tomato */
+
+/* --- kinetic type: each letter's width/weight responds to cursor distance; idles as a wave --- */
+const words=[...document.querySelectorAll('.word')];
+words.forEach(l=>{l.innerHTML=[...l.dataset.word].map(c=>`<span>${c}</span>`).join('')});
+const letters=words.flatMap(l=>[...l.children]);
+function fitLines(){const K=document.getElementById('kin');words.forEach(w=>w.style.fontSize='100px');letters.forEach(s=>s.style.fontVariationSettings='"wdth" 125,"wght" 900');
+  const w=words[0].getBoundingClientRect().width,avail=K.clientWidth-parseFloat(getComputedStyle(K).paddingLeft)*2;const fs=(100*avail/w*.995)+'px';words.forEach(x=>x.style.fontSize=fs)}
+let mx=-1e4,my=-1e4,act=0;const K=document.getElementById('kin');
+K.addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;act=1});K.addEventListener('pointerleave',()=>act=0);
+const cur=letters.map(()=>({w:110,g:800}));let t0=performance.now(),A=0;
+let pmode='home',heroVis=true;
+new IntersectionObserver(([e])=>heroVis=e.isIntersecting).observe(document.getElementById('stage'));
+const centers=letters.map(()=>({x:0,y:0}));
+function frame(now){requestAnimationFrame(frame);if(pmode!=='home'||!heroVis||NA.reduce)return;
+  const t=(now-t0)/1000;A+=(act-A)*.06;
+  if(A>.01)letters.forEach((s,i)=>{const r=s.getBoundingClientRect();centers[i].x=r.left+r.width/2;centers[i].y=r.top+r.height/2}); // read pass
+  letters.forEach((s,i)=>{                                                                                                         // write pass
+    const near=A>.01?Math.max(0,1-Math.hypot(mx-centers[i].x,my-centers[i].y)/(innerWidth*.3)):0;
+    const wave=(Math.sin(t*1.4-i*.6)+1)/2,k=A*near+(1-A)*wave;
+    cur[i].w+=(70+k*55-cur[i].w)*.15;cur[i].g+=(250+k*650-cur[i].g)*.15;
+    s.style.fontVariationSettings=`"wdth" ${cur[i].w.toFixed(1)},"wght" ${cur[i].g.toFixed(0)}`});
+}
+const P=Physics.hero({stage:document.getElementById('stage'),letters,rebuildBtn:document.getElementById('rebuild'),onMode:m=>{pmode=m}});
+document.fonts.ready.then(()=>{fitLines();requestAnimationFrame(frame);
+  let seen=false;try{seen=sessionStorage.getItem('na-intro')}catch(e){}
+  if(!seen&&!location.hash.includes('nointro')){try{sessionStorage.setItem('na-intro',1)}catch(e){}setTimeout(()=>P.intro(),60)}});
+Physics.pit(document.getElementById('pit'),[
+ {t:"Let's talk ↗",cls:'go',action:'talk'},{t:'AI Product',cls:'a'},{t:'Consulting'},{t:'Big Data',cls:'o'},{t:'Annotation'},
+ {t:'Models',cls:'o'},{t:'Pipelines'},{t:'Strategy',cls:'a'},{t:'Integration',cls:'o'},{t:'−50% IP deal',cls:'a'},{t:'Vancouver'},{t:'Beginner‑friendly',cls:'o'}]);addEventListener('resize',fitLines);
+
+/* --- custom cursor + magnetic button --- */
+const C=document.getElementById('cur'),CL=document.getElementById('curl');let cx=0,cy=0,tx=0,ty=0,down=false;
+function label(t){CL.textContent=t||'';C.classList.toggle('lab',!!t)}
+addEventListener('pointerdown',()=>{down=true;C.style.scale='.85'});addEventListener('pointerup',()=>{down=false;C.style.scale=''});
+addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY;const t=e.target;
+  if(t.closest('.word span'))label(down?'Throw':'Grab');else if(t.closest('.chip'))label(down?'Throw':(t.closest('.chip').dataset.action?'Open':'Grab'));
+  else if(t.closest('#mag'))label('Go');else{label('');C.classList.toggle('big',!!t.closest('a,.it,canvas,button'))}});
+(function f(){cx+=(tx-cx)*.25;cy+=(ty-cy)*.25;C.style.transform=`translate(${cx}px,${cy}px)`;requestAnimationFrame(f)})();
+const mag=document.getElementById('mag');
+mag.addEventListener('pointermove',e=>{const r=mag.getBoundingClientRect();mag.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.35}px,${(e.clientY-r.top-r.height/2)*.35}px)`});
+mag.addEventListener('pointerleave',()=>{mag.style.transition='transform .5s cubic-bezier(.2,.8,.1,1)';mag.style.transform='';setTimeout(()=>mag.style.transition='',500)});
+
+/* --- sticky services counter --- */
+const nums=[...document.querySelectorAll('#num div')],st=document.getElementById('stitle'),pr=document.getElementById('prog');
+const panels=[...document.querySelectorAll('.panel')];
+const navB=[...document.querySelectorAll('#snav button')];
+function setActive(i){st.textContent=panels[i].dataset.t;nums.forEach((n,j)=>n.style.transform=`translateY(${(j-i)*100}%)`);navB.forEach((b,j)=>{b.classList.toggle('on',j===i);b.setAttribute('aria-current',j===i?'true':'false')})}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)setActive(+e.target.dataset.i)}),{rootMargin:'-45% 0px -45% 0px'});
+navB.forEach(b=>b.addEventListener('click',()=>{const p=panels[+b.dataset.i],stickH=innerWidth<=900?document.querySelector('.stick').offsetHeight:0;
+  scrollTo({top:p.getBoundingClientRect().top+scrollY-stickH-(innerWidth<=900?0:Math.max(0,(innerHeight-p.offsetHeight)/2)),behavior:'smooth'})}));
+panels.forEach(p=>io.observe(p));
+const svc=document.getElementById('services');
+document.querySelectorAll('[data-plate]').forEach(c=>NA.plate(c,c.dataset.plate,{pointer:c.parentElement}));
+
+/* --- accordion: open on hover (desktop) / tap (touch) --- */
+const its=[...document.querySelectorAll('.it')];
+its.forEach(it=>{it.addEventListener('pointerenter',()=>{its.forEach(x=>x.classList.remove('open'));it.classList.add('open')});it.addEventListener('click',()=>{its.forEach(x=>x.classList.remove('open'));it.classList.add('open')})});
+
+/* --- scroll-linked width on the offer --- */
+const S=document.getElementById('stretch'),O=document.getElementById('pricing');
+let sq=false,lastK=-1;
+function onScroll(){if(sq)return;sq=true;requestAnimationFrame(()=>{sq=false;
+  const r=O.getBoundingClientRect();
+  if(r.top<innerHeight&&r.bottom>0){const k=Math.min(1,Math.max(0,(innerHeight-r.top)/(innerHeight+r.height*.4)));
+    if(Math.abs(k-lastK)>.01){lastK=k;S.style.fontVariationSettings=`"wdth" ${(62+k*63).toFixed(1)},"wght" ${Math.round(300+k*600)}`}}
+  const sr=svc.getBoundingClientRect();if(sr.top<innerHeight&&sr.bottom>0)pr.style.transform=`scaleX(${Math.min(1,Math.max(0,(-sr.top)/(sr.height-innerHeight))).toFixed(3)})`})}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+{const M=document.getElementById('mar'),tr=M.firstElementChild;tr.innerHTML+=tr.innerHTML;
+ let W=tr.scrollWidth/2,x=0,v=0,ly=scrollY,last=performance.now(),vis=false;
+ new ResizeObserver(()=>W=tr.scrollWidth/2).observe(tr);new IntersectionObserver(([e])=>vis=e.isIntersecting).observe(M);
+ (function f(now){requestAnimationFrame(f);const dt=Math.min(.05,(now-last)/1000);last=now;const d=scrollY-ly;ly=scrollY;v+=(d-v)*.12;if(!vis)return;
+  const sp=90+Math.min(900,Math.abs(v)*30);x-=sp*dt*(v<-.5?-1:1);if(x<=-W)x+=W;if(x>0)x-=W;
+  const sk=Math.max(-12,Math.min(12,-v*.35));tr.style.transform=`translate3d(${x.toFixed(1)}px,0,0) skewX(${sk.toFixed(2)}deg)`})(last)}
+
+/* --- contact dialog --- */
+const D=document.getElementById('talk'),TF=document.getElementById('tf'),TS=document.getElementById('tfs');
+function openTalk(e){if(e)e.preventDefault();if(D.open)return;C.style.opacity=0;try{D.showModal()}catch(_){D.setAttribute('open','')}setTimeout(()=>TF.querySelector('input[name=name]').focus({preventScroll:true}),60)}
+document.querySelectorAll('[data-talk]').forEach(el=>el.addEventListener('click',openTalk));
+document.getElementById('pit').addEventListener('chipaction',e=>{if(e.detail==='talk')openTalk()});
+D.addEventListener('close',()=>C.style.opacity='');D.addEventListener('click',e=>{if(e.target===D||e.target.closest('[data-close]'))D.close()});
+D.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{const v=b.dataset.copy;let ok=false;
+  try{await navigator.clipboard.writeText(v);ok=true}catch(_){try{const t=document.createElement('textarea');t.value=v;document.body.appendChild(t);t.select();ok=document.execCommand('copy');t.remove()}catch(__){}}
+  b.textContent=ok?'Copied ✓':'Select & copy';b.classList.toggle('ok',ok);setTimeout(()=>{b.textContent='Copy';b.classList.remove('ok')},1800)}));
+TF.addEventListener('submit',async e=>{e.preventDefault();const btn=TF.querySelector('.send');btn.disabled=true;TS.textContent='Sending…';
+  try{const r=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(TF)).toString()});
+    if(!r.ok)throw new Error(r.status);TF.reset();TS.textContent="Thanks — message sent. We'll be in touch soon."}
+  catch(_){TS.textContent="Couldn't send from here. Please email neuralartinc@gmail.com — your message is still in the form."}
+  btn.disabled=false});
+NA.reveal();NA.clock(document.getElementById('clk'));
+</script></body></html>
